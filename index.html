@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Belajar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">REVO</div>
+    <nav>
+      <button>Home</button>
+      <button>My Profile</button>
+      <button>Portofolio</button>
+      <button>Message Us</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Form Belajar</h2>
+      <p>Ini adalah website latihan pertama</p>
+
+      <form id="belajarForm">
+        <label>Nama:
+          <input type="text" name="nama" required>
+        </label>
+
+        <label>Tanggal Lahir:
+          <input type="date" name="tanggal" required>
+        </label>
+
+        <label>Jenis Kelamin:
+          <input type="radio" name="gender" value="Laki-Laki" checked> Laki-Laki
+          <input type="radio" name="gender" value="Perempuan"> Perempuan
+        </label>
+
+        <label>Pesan:
+          <textarea name="pesan" required></textarea>
+        </label>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Tanggal Lahir</th>
+            <th>Jenis Kelamin</th>
+            <th>Pesan</th>
+            <th>Profile</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="dataBody">
+          <tr>
+            <td>Ada Lovelace</td>
+            <td>December 10, 1815</td>
+            <td>Perempuan</td>
+            <td>Belajar Buat Website</td>
+            <td><a href="#">Klik Disini</a></td>
+            <td><button onclick="hapusBaris(this)">🗑️</button></td>
+          </tr>
+          <!-- Tambahan baris dari JavaScript -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
